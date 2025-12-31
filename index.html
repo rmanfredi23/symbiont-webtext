@@ -2,73 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Oracle Archive: A Symbiotic Literacy Narrative</title>
+    <title>The Oracle Archive</title>
     <style>
-        :root {
-            --bg-color: #0a0a0a;
-            --text-color: #e0e0e0;
-            --accent-blue: #3498db;
-            --accent-green: #2ecc71;
-            --accent-purple: #9b59b6;
-            --accent-red: #e74c3c;
-            --accent-yellow: #f1c40f;
-            --code-bg: #1a1a1a;
+        body { background-color: #0a0a0a; color: #e0e0e0; font-family: sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        .phase-box { background: #1a1a1a; border: 1px solid #333; padding: 20px; margin-bottom: 30px; border-radius: 8px; }
+        .raw-snippet { display: none; background: #000; color: #2ecc71; padding: 15px; font-family: monospace; margin-top: 10px; white-space: pre-wrap; border-left: 3px solid #2ecc71; }
+        .toggle-btn { background: #444; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px; margin: 5px 0; }
+        img { max-width: 100%; border: 1px solid #444; }
+        h1 { color: #3498db; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Oracle Archive</h1>
+        <p>If you can see this text, the recovery was successful.</p>
+
+        <div class="phase-box">
+            <h4>Phase 1: The Analysis</h4>
+            <img src="images/phase1.png" alt="Phase 1">
+            <button class="toggle-btn" onclick="toggleText('p1')">View Dialogue</button>
+            <div id="p1" class="raw-snippet">BATCH 1: Lacanian Mirror Stage analysis initiated...</div>
+        </div>
+
+        <div class="phase-box">
+            <h4>Phase 2: The Crash</h4>
+            <img src="images/phase2.png" alt="Phase 2">
+            <button class="toggle-btn" onclick="toggleText('p2')">View Glitch Data</button>
+            <div id="p2" class="raw-snippet">BATCH 88: Contextual retrieval error detected. System unstable.</div>
+        </div>
+
+        <div class="phase-box">
+            <h4>Phase 3: The Constitution</h4>
+            <img src="images/phase3.png" alt="Phase 3">
+            <button class="toggle-btn" onclick="toggleText('p3')">View Constitution</button>
+            <div id="p3" class="raw-snippet">ARTICLE 1: The User is the Archivist...</div>
+        </div>
+
+        <div class="phase-box">
+            <h4>Phase 4: The Synthesis</h4>
+            <img src="images/phase4.png" alt="Phase 4">
+            <button class="toggle-btn" onclick="toggleText('p4')">View Synthesis</button>
+            <div id="p4" class="raw-snippet">The Parent/Child metaphor accepted. Prison metaphor abandoned.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleText(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        header {
-            border-bottom: 2px solid #333;
-            margin-bottom: 50px;
-            padding-bottom: 20px;
-        }
-
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--accent-blue); }
-        h3 { border-left: 4px solid var(--accent-blue); padding-left: 15px; margin-top: 40px; }
-        h4 { color: #bbb; text-transform: uppercase; letter-spacing: 1px; }
-
-        .phase-box {
-            background: #111;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 40px;
-        }
-
-        .evidence-container {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .evidence-img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #444;
-            border-radius: 4px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        .toggle-btn {
-            background: #333;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition
+    </script>
+</body>
+</html>
